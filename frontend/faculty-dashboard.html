@@ -1,0 +1,47 @@
+<!-- frontend/faculty-dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Faculty Dashboard</title>
+  <link rel="stylesheet" href="faculty.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    #feedbackChart {
+      width: 700px !important;
+      height: 700px !important;
+    }
+  </style>
+  
+  
+</head>
+<body>
+  <h2 id="faculty-name"></h2>
+  <h2>Your Assigned Courses:</h2>
+  <ul id="courseList"></ul>
+  <button id="logoutButton" style="margin-top: 1rem;">Logout</button>
+
+  <div id="reportSection" style="display:none;">
+    <h3>Feedback Report</h3>
+    <label for="chartSelector">Select Feedback Category:</label>
+<select id="chartSelector">
+  <option value="courseOutcomeRatings">Course Outcome Ratings</option>
+  <option value="courseContentRatings">Content Ratings</option>
+  <option value="assignmentRatings">Assignment Ratings</option>
+  <option value="facultyResponseRatings">Faculty Response</option>
+  <option value="facultyTeachingRatings">Faculty Teaching</option>
+</select>
+
+
+<canvas id="feedbackChart"></canvas>
+    <canvas id="courseOutcomeChart" width="200" height="200"></canvas>
+<canvas id="courseContentChart" width="200" height="200"></canvas>
+<canvas id="assignmentChart" width="200" height="200"></canvas>
+<canvas id="facultyResponseChart" width="200" height="200"></canvas>
+<canvas id="facultyTeachingChart" width="200" height="200"></canvas>
+
+  </div>
+
+  <script src="faculty.js"></script>
+</body>
+</html>

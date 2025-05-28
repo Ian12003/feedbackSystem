@@ -1,0 +1,55 @@
+/* frontend/faculty-dashboard.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f2f5f9;
+    margin: 0;
+    padding: 2rem;
+    color: #333;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    color: #2c3e50;
+  }
+  
+  h2 {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    color: #34495e;
+  }
+  
+  #courseList {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+  }
+  
+  #courseList li {
+    background-color: #ffffff;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-left: 6px solid #3498db;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+  }
+  
+  #courseList li:hover {
+    transform: scale(1.02);
+    background-color: #f9fcff;
+  }
+  #logoutButton {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #logoutButton:hover {
+    background-color: #c0392b;
+  }
+  

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="toggle-buttons">
+        <button id="showAdmin">Admin Login</button>
+        <button id="showFaculty">Faculty Login</button>
+    </div>  
+    <div class="login-wrapper">
+        <div class="login-container" id="adminLoginContainer">
+            <h2>Admin Login</h2>
+            <form id="loginForm">
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+                <p id="error-message"></p>
+            </form>
+        </div>
+    
+        <div class="login-container" id="facultyLoginContainer">
+            <h2>Faculty Login</h2>
+            <form id="facultyLoginForm">
+                <input type="email" id="facultyEmail" placeholder="Email" required>
+                <input type="password" id="facultyPassword" placeholder="Password" required>
+                <button type="submit">Login</button>
+                <p id="faculty-error-message"></p>
+            </form>
+        </div>
+    </div>
+    
+    
+    <script src="login.js"></script>
+</body>
+</html>

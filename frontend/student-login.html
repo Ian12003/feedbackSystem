@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Login & Registration</title>
+  <link rel="stylesheet" href="./student.css">
+  <style>
+    .toggle-btn {
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 5px 5px 0 0;
+      transition: background-color 0.3s, color 0.3s;
+    }
+  
+    .toggle-btn.active {
+      background-color: #4f46e5; /* Indigo */
+      color: white;
+    }
+  
+    .toggle-btn.inactive {
+      background-color: #e5e7eb; /* Gray-200 */
+      color: #4f46e5;
+    }
+  </style>
+  
+</head>
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <h2 class="title">Student Portal</h2>
+
+      <div class="toggle-buttons">
+        <button id="showLogin" class="toggle-btn login-btn">Login</button>
+        <button id="showRegister" class="toggle-btn register-btn">Register</button>
+      </div>
+
+      <!-- Login Section -->
+      <form id="student-login-form" class="form-section">
+        <div class="form-group">
+          <label for="login-rollno">Roll Number</label>
+          <input type="text" id="login-rollno" name="rollno" required>
+        </div>
+        <div class="form-group">
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" name="password" required>
+        </div>
+        <button type="submit" class="submit-btn login-submit">Login</button>
+        <div class="forgot-password">
+          <a href="forgot-password.html" id="forgot-password-link">Forgot Password?</a>
+        </div>
+        
+      </form>
+
+      <!-- Register Section -->
+      <form id="student-register-form" class="form-section hidden">
+        <div class="form-group">
+          <label for="register-department">Department</label>
+          <select id="register-department" name="department_id" required>
+            <option value="">Select Department</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="register-program">Program</label>
+          <select id="register-program" name="program_id" required>
+            <option value="">Select Program</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="register-rollno">Roll Number</label>
+          <input type="text" id="register-rollno" name="rollno" required>
+        </div>
+        <div class="form-group">
+          <label for="register-name">Full Name</label>
+          <input type="text" id="register-name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="register-email">University Email</label>
+          <input type="email" id="register-email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="register-password">Password</label>
+          <input type="password" id="register-password" name="password" required>
+        </div>
+        <button type="submit" class="submit-btn register-submit">Register</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="student-login.js"></script>
+</body>
+</html>

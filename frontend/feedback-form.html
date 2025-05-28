@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Course Feedback Form</title>
+  <link rel="stylesheet" href="feedback.css" />
+  <style>
+    .rating-group {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+    .rating-label {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Course Feedback Form</h2>
+
+  <form id="feedbackForm">
+    <h3 id="student-name"></h3> <!-- For student name -->
+    <h3 id="student-rollno"></h3> <!-- For student roll number -->
+    <label for="department_id">Select Department:</label>
+            <select id="department_id" name="department_id"  required>
+              <option value="">Loading departments...</option>
+            </select>
+    <label for="course_id">Select Course:</label>
+    <select id="course_id" name="course_id" required>
+        <option value="">-- Select Course --</option>
+      </select>
+      <label for="faculty_id">Select Faculty:</label>
+      <select id="faculty_id" name="faculty_id" required>
+        <option value="">-- Select Faculty --</option>
+      </select>
+      
+
+    <div class="rating-label">Course Outcome Rating:</div>
+    <div class="rating-group">
+      <label><input type="radio" name="course_outcome_rating" value="1" required /> 1</label>
+      <label><input type="radio" name="course_outcome_rating" value="2" /> 2</label>
+      <label><input type="radio" name="course_outcome_rating" value="3" /> 3</label>
+      <label><input type="radio" name="course_outcome_rating" value="4" /> 4</label>
+      <label><input type="radio" name="course_outcome_rating" value="5" /> 5</label>
+    </div>
+
+    <div class="rating-label">Course Content Rating:</div>
+    <div class="rating-group">
+      <label><input type="radio" name="course_content_rating" value="1" required /> 1</label>
+      <label><input type="radio" name="course_content_rating" value="2" /> 2</label>
+      <label><input type="radio" name="course_content_rating" value="3" /> 3</label>
+      <label><input type="radio" name="course_content_rating" value="4" /> 4</label>
+      <label><input type="radio" name="course_content_rating" value="5" /> 5</label>
+    </div>
+
+    <div class="rating-label">Assignment Rating:</div>
+    <div class="rating-group">
+      <label><input type="radio" name="assignment_rating" value="1" required /> 1</label>
+      <label><input type="radio" name="assignment_rating" value="2" /> 2</label>
+      <label><input type="radio" name="assignment_rating" value="3" /> 3</label>
+      <label><input type="radio" name="assignment_rating" value="4" /> 4</label>
+      <label><input type="radio" name="assignment_rating" value="5" /> 5</label>
+    </div>
+
+    <div class="rating-label">Faculty Response Rating:</div>
+    <div class="rating-group">
+      <label><input type="radio" name="faculty_response_rating" value="1" required /> 1</label>
+      <label><input type="radio" name="faculty_response_rating" value="2" /> 2</label>
+      <label><input type="radio" name="faculty_response_rating" value="3" /> 3</label>
+      <label><input type="radio" name="faculty_response_rating" value="4" /> 4</label>
+      <label><input type="radio" name="faculty_response_rating" value="5" /> 5</label>
+    </div>
+
+    <div class="rating-label">Faculty Teaching Rating:</div>
+    <div class="rating-group">
+      <label><input type="radio" name="faculty_teaching_rating" value="1" required /> 1</label>
+      <label><input type="radio" name="faculty_teaching_rating" value="2" /> 2</label>
+      <label><input type="radio" name="faculty_teaching_rating" value="3" /> 3</label>
+      <label><input type="radio" name="faculty_teaching_rating" value="4" /> 4</label>
+      <label><input type="radio" name="faculty_teaching_rating" value="5" /> 5</label>
+    </div>
+
+    <label for="comments">Additional Comments:</label>
+    <textarea name="comments" id="comments" rows="4" placeholder="Optional"></textarea>
+
+    <br><br>
+    <button type="submit">Submit Feedback</button>
+  </form>
+
+  <script src="feedback.js"></script>
+</body>
+</html>

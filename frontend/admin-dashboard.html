@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <nav class="sidebar">
+        <h2>Admin Panel</h2>
+        <h2 id="adminNameDisplay"></h2>
+        <ul>
+          <li onclick="showForm('addAdmin')">Add Admin</li>
+          <li onclick="showForm('addSchool')">Add School</li>
+          <li onclick="showForm('addDepartment')">Add Department</li>
+          <li onclick="showForm('addProgram')">Add Program</li>
+          <li onclick="showForm('addCourse')">Add Course</li>
+          <li onclick="showForm('addFaculty')">Add Faculty</li>
+          <li onclick="showForm('assignFacultyToCourse')">Assign Faculty</li>
+        </ul>
+        <button id="logoutButton" class="logout-btn">Logout</button>
+      </nav>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <div id="addAdmin" class="form-container active">
+          <h2>Add New Admin</h2>
+          <form id="addAdminForm">
+            <input type="text" id="name" placeholder="Admin Name" required />
+            <input type="email" id="email" placeholder="Admin Email" required />
+            <input
+              type="password"
+              id="password"
+              placeholder="Password"
+              required
+            />
+            <button type="submit">Add Admin</button>
+
+            <p id="response-message"></p>
+          </form>
+        </div>
+
+        <div id="addSchool" class="form-container">
+          <h2>Add New School</h2>
+          <form id="addSchoolForm">
+            <input
+              type="text"
+              id="schoolName"
+              placeholder="School Name"
+              required
+            />
+            <button type="submit">Add School</button>
+            <p id="school-response"></p>
+          </form>
+          <h2>All Schools</h2>
+<table id="schoolsTable" border="1" cellspacing="0" cellpadding="8">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>School Name</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+        </div>
+
+        <div id="addDepartment" class="form-container">
+          <h2>Add New Department</h2>
+          <form id="addDepartmentForm">
+            <select id="schoolSelect" required>
+              <option value="">Select School</option>
+            </select>
+            <input
+              type="text"
+              id="departmentName"
+              placeholder="Department Name"
+              required
+            />
+            <button type="submit">Add Department</button>
+            <p id="department-response"></p>
+          </form>
+        </div>
+
+        <div id="addProgram" class="form-container">
+          <h2>Add New Program</h2>
+          <form id="addProgramForm">
+            <label for="departmentSelect">Select Department:</label>
+            <select id="departmentSelect" required>
+              <option value="">Loading departments...</option>
+            </select>
+            <input
+              type="text"
+              id="programName"
+              placeholder="Program Name"
+              required
+            />
+            <button type="submit">Add Program</button>
+            <p id="program-response"></p>
+          </form>
+        </div>
+
+        <div id="addCourse" class="form-container">
+          <h2>Add New Course</h2>
+          <form id="addCourseForm">
+            <label for="courseDepartmentSelect">Select Department:</label>
+            <select id="courseDepartmentSelect" required>
+              <option value="">Loading departments...</option>
+            </select>
+
+            <label for="courseProgramSelect">Select Program:</label>
+            <select id="courseProgramSelect" required>
+              <option value="">Select department first</option>
+            </select>
+
+            <label for="courseType">Select Course Type:</label>
+            <select id="courseType" required>
+              <option value="">Select type</option>
+              <option value="core">Core</option>
+              <option value="elective">Elective</option>
+            </select>
+
+            <input
+              type="text"
+              id="courseCode"
+              placeholder="Course Code (e.g. CS101)"
+              required
+            />
+            <input
+              type="text"
+              id="courseName"
+              placeholder="Course Name"
+              required
+            />
+
+            <button type="submit">Add Course</button>
+            <p id="course-response"></p>
+          </form>
+        </div>
+
+        <div id="addFaculty" class="form-container">
+          <h2>Add Faculty</h2>
+          <form id="addFacultyForm">
+            <select id="facultyDepartment" required>
+              <option value="">Select Department</option></select
+            ><br />
+            <input
+              type="text"
+              id="facultyName"
+              placeholder="Faculty Name"
+              required
+            /><br />
+            <input
+              type="email"
+              id="facultyEmail"
+              placeholder="Faculty Email"
+              required
+            /><br />
+            <input
+              type="password"
+              id="facultyPassword"
+              placeholder="Password"
+              required
+            /><br />
+
+            <button type="submit">Add Faculty</button>
+            <p id="facultyResponseMessage"></p>
+          </form>
+        </div>
+        <!-- Add a new section for Assigning Faculty to Course -->
+        <div id="assignFacultyToCourse" class="form-container">
+          <h2>Assign Faculty to Course</h2>
+          <form id="assignFacultyForm">
+            <label for="assignCourseSelect">Select Course:</label>
+            <select id="assignCourseSelect" required>
+              <option value="">Loading courses...</option>
+            </select>
+
+            <label for="assignFacultySelect">Select Faculty:</label>
+            <select id="assignFacultySelect" required>
+              <option value="">Loading faculties...</option>
+            </select>
+
+            <button type="submit">Assign Faculty</button>
+            <p id="assign-response"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="admin-dashboard.js"></script>
+  </body>
+</html>
